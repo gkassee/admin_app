@@ -1,0 +1,2 @@
+module WebmasterSessionsHelper
+end
