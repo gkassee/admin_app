@@ -20,9 +20,11 @@ class WebmasterSessionsController < ApplicationController
     else
       flash[:alert] = "Invalid username or password"
       render "new"
+    end
   end
   
 
   def delete
   end
+
 end

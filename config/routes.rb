@@ -6,6 +6,9 @@ resources :posts
 resources :sessions 
 resources :webmaster_sessions 
 
+delete '/logout' => 'sessions#destroy'
+delete '/destroy' => 'posts#destroy'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

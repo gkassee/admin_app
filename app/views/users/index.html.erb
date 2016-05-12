@@ -22,7 +22,7 @@
 <% @posts.last(10).reverse_each do |post| %>
 	<h1><%= post.title %></h1>
 	<p><%= post.body %></p>
-	<% if session[:user_id] == post.user_id %>
-		<%= link_to "edit", post_path(post.id) %>  
+	<% if session[:user_id] == post.user_id || session[:webmaster_id] %>
+		<%= link_to "edit", post_path(post.id) %>  |  <%= link_to "delete", post_path(post), method: :delete %>
 	<% end %>	
 <% end %>
